@@ -1,0 +1,130 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: #DAD1CB;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+    transition: all 0.3s ease; /* Smooth transitions for interactive elements */
+}
+
+/* Full Page Background */
+body {
+  
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Full Page Login Form */
+.login_form {
+    width: 90%; /* Adjust based on your preference */
+    max-width: 500px; /* Maximum width for larger screens */
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    padding: 50px 35px;
+    border-radius: 10px;
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+    animation: fadeIn 1s ease-in-out; /* Animation for a smooth appearance */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Form Elements */
+.login_form h3 {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+    color: #333; /* Darker text for better contrast against the background */
+}
+
+.login_form label {
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333; /* Darker text for better contrast against the background */
+}
+
+.login_form input {
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background for inputs */
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 300;
+    color: #333; /* Darker text for better contrast against the background */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border for inputs */
+}
+
+.login_form button {
+    margin-top: 50px;
+    width: 100%;
+    background-color: #DAD1CB;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none; /* Remove default button border */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* Add shadow for a modern look */
+    transition: background-color 0.3s ease; /* Smooth background color change on hover */
+}
+
+.login_form button:hover {
+    background-color: #CDD2D1; /* Slightly darker shade on hover */
+}
+
+/* Placeholder Styling */
+::placeholder {
+    color: #a59d9d;
+    opacity: 30%;
+}
+
+/* Accessibility and Responsiveness */
+@media (max-width: 768px) {
+ .login_form {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
+
+
+/* General styling for input fields */
+input[type="name"], input[type="email"], input[type="password"] {
+    width: 100%; /* Full width */
+    padding: 12px; /* Increased padding for better touch targets */
+    margin: 8px 0; /* Added margin for spacing */
+    display: inline-block; /* Allows for block-level behavior */
+    border: 1px solid #ccc; /* Slightly thicker border for better visibility */
+    border-radius: 4px; /* Rounded corners for a softer look */
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+    font-size: 16px; /* Larger font size for easier reading */
+    background-color: #f9f9f9; /* Lighter background for better contrast */
+    color: #333; /* Darker text for better readability */
+}
+
+/* Styling for the submit button */
+button {
+    background-color: #4CAF50; /* Green background */
+}
+
+
+
+
+
