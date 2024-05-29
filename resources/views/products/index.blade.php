@@ -13,18 +13,16 @@
         <button class="search-button" type="submit">Search</button>
       </form>
     </div>
-    <div class="filters">
-      <select id="categories">
-        <option>Psi</option>
-        <option>Macke</option>
-        <option>Ostalo</option>
+    <form class="filters">
+      <select id="category-name" name="c">
+        @foreach($categories as $option)
+            <option value="{{ $option->id }}">{{ $option->name }} ({{ $option->type }})</option>
+        @endforeach
       </select>
-      <select id="categories">
-        <option>Hrana</option>
-        <option>Igracke</option>
-        <option>Nega</option>
-      </select>
-    </div>
+      <button class="">
+        Dodaj filter
+      </button>
+    </form>
   </div>
   <div class="products-container">
     <div class="product-cards">

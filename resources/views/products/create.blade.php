@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.admin')
 
 @section('title', 'About')
 
@@ -38,6 +38,16 @@
                     <div class="input-container">
                         
                         <input name="image" type="file" accept="image/*">
+                    </div>
+
+                    <div class="input-container">
+                        <select class="product-input" name="category">
+                            @foreach ($categories as $category)
+                                <option value="{{ $category->id }}">
+                                    {{ $category->name }} ({{$category->type}})
+                                </option>
+                            @endforeach
+                        </select>
                     </div>
 
                     <div class="btn-container">

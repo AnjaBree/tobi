@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Models\Product;
 
@@ -12,18 +14,36 @@ class ProductController extends Controller
      */
     public function index(Request $request)
     {
-        $query = $request->get('q');
 
-        if ($query) {
-            $products = Product::where('name', 'LIKE', "%{$query}%")
-                ->orWhere('desc', 'LIKE', "%{$query}%")
-                ->orderBy("created_at", 'DESC')
-                ->paginate(15)->withQueryString();
-        } else {
-            $products = Product::orderBy("created_at", 'DESC')->paginate(15)->withQueryString();
+        $categories = Category::all();
+
+        
+        
+        $search = $request->get('q'); // Search term
+        $type = $request->get('t'); // Category type
+        $category = $request->get('c'); // Category name
+
+        // Start building the base query
+        $baseQuery = Product::orderBy("created_at", "DESC");
+
+        // If there's a search term, add it to the query
+        if (!empty($search)) {
+            $baseQuery->where(function ($query) use ($search) {
+                $query->where('name', 'LIKE', "%{$search}%")
+                    ->orWhere('desc', 'LIKE', "%{$search}%");
+            });
         }
-        // $products = Product::orderBy("created_at", 'DESC')->paginate(15);
-        return view('products.index', compact('products'));
+
+        // If a category name is provided, filter by it
+        if (!empty($category)) {
+            $baseQuery->where('category_id', $category);
+        }
+
+
+        // Execute the query and paginate the results
+        $products = $baseQuery->paginate(15)->withQueryString();
+
+        return view('products.index', compact('products', 'categories'));
     }
 
     /**
@@ -32,7 +52,8 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('products.create');
+        $categories = Category::all();
+        return view('products.create', compact('categories'));
     }
 
     /**
@@ -52,6 +73,7 @@ class ProductController extends Controller
                 'name' => $request->name,
                 'desc' => $request->desc,
                 'price'=> $request->price,
+                'category_id' => $request->category,
                 'img'=> $img
             ]);
 
@@ -79,7 +101,8 @@ class ProductController extends Controller
      */
     public function edit(string $id)
     {
-        return view('products.edit');
+        $product = Product::find($id);
+        return view('products.edit', compact('product'));
     }
 
     /**
@@ -88,7 +111,10 @@ class ProductController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $product = Product::find($id);
+        $product->update($request->all());
+        $product->save();
+        return redirect()->route('admin.products')->with('success', 'Product edited');
     }
 
     /**
@@ -97,6 +123,7 @@ class ProductController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        Product::destroy($id);
+        return redirect()->back()->with('success', 'Deleted');
     }
 }

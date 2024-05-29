@@ -21,6 +21,7 @@
     
     
             <button type="submit">{{ __('Login') }}</button>
+            <p class="text-muted">Don't have account? <a href="{{ route('register') }}">Register now</a></p>
         </div>
     </form>
 @endsection

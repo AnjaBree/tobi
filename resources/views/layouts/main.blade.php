@@ -23,25 +23,40 @@
                 </div>
                 <div class="nav-links">
                     <ul class="nav-items">
-                        <li class="nav-item active"><a href="{{ route('home') }}">Home</a></li>
-                        <li class="nav-item"><a href="{{ route('products.index') }}">Products</a></li>
-                        <li class="nav-item"><a href="{{ route('about') }}">About</a></li>
+                        <li class="nav-item  {{ Route::is('home') ? 'active' : '' }}"><a href="{{ route('home') }}">Home</a></li>
+                        <li class="nav-item  {{ Route::is('products.index') ? 'active' : '' }}"><a href="{{ route('products.index') }}">Products</a></li>
+                        <li class="nav-item  {{ Route::is('about') ? 'active' : '' }}"><a href="{{ route('about') }}">About</a></li>
                         <li class="nav-item"><a href="{{ route("about") }}#contact">Contact</a></li>
-                    </ul>
+                        @if(auth()->check() && Auth::user()->role == "admin")
+                            <li class="nav-item"><a href="{{ route('admin.products') }}">Admin</a></li>
+                        @endif
+                    </ul> 
                 </div>
                 <div class="user-nav">
-                    <a href="{{ route('cart.index') }}" class="cart">
-                        <i class="fas fa-shopping-cart"></i>
-                    </a>
-                    <form class="user-profile" method="POST" action="{{ route('logout') }}">
-                        @csrf
-            
-                        <div class="logout">
-                            <button type="submit">
-                                <i class="fas fa-user"></i>
-                            </button>
-                        </div>
-                    </form> 
+                    @if(auth()->check())
+                        <a href="{{ route('cart.index') }}" class="cart  {{ Route::is('cart.index') ? 'active' : '' }}">
+                            <i class="fas fa-shopping-cart"></i>
+                            <div class="badge">
+                                {{ $cart_count }}
+                            </div>
+                        </a>
+                        <form class="user-profile" method="POST" action="{{ route('logout') }}">
+                            @csrf
+                
+                            <div class="logout">
+                                <button type="submit">
+                                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                </button>
+                            </div>
+                        </form> 
+                    @else
+                    <ul class="nav-items">
+                        <li class="nav-item"><a href="{{ route('login') }}">Login</a></li>
+                        <li class="nav-item"><a href="{{ route('register') }}">Register</a></li>
+                        
+                    </ul> 
+                    @endif
+                    
                 </div>
                 
                 </div>

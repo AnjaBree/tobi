@@ -21,6 +21,7 @@
         <input type="password" name="password" placeholder="1234" id="password"/>
 
         <button type="submit">{{ __('Register') }}</button>
+        <p class="text-muted">Already have an account? <a href="{{ route('login') }}">Login here</a></p>
         </div>
     </form>
 @endsection

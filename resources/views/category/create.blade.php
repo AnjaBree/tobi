@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'About')
+@section('title', 'Category')
 
 @section('head')
     @vite(['resources/css/main.css'])
@@ -11,7 +11,7 @@
         <div class="create-card">
 
             <div class="card-header">
-                <h1>Edit Product</h1>
+                <h1>New Category</h1>
             </div>
 
             @if(session('error'))
@@ -21,31 +21,24 @@
 
 
             <div class="card-body">
-                <form class="product-form" method="POST" action="{{ route('products.update', $product->id) }}">
+                <form class="product-form" method="POST" enctype="multipart/form-data" action="{{ route('category.store') }}">
                     @csrf
-                    @method('PUT')
                     <div class="input-container">
                         <label>Name</label>
-                        <input class="product-input" type="text" name="name" placeholder="Name" value="{{ $product->name }}" />
+                        <input class="product-input" type="text" name="name" placeholder="Name" />
                     </div>
                     <div class="input-container">
-                        <label>Description</label>
-                        <input class="product-input" type="text" name="desc" placeholder="Description" value="{{ $product->desc }}" />
+                        <label>Type</label>
+                        <input class="product-input" type="text" name="type" placeholder="Description" />
                     </div>
-                    <div class="input-container">
-                        <label>Price</label>
-                        <input class="product-input" type="number" name="price" placeholder="Price" value="{{ $product->price }}" />
-                    </div>
-                    
 
                     <div class="btn-container">
                         <button class="save-product-btn">
-                            Save product
+                            Save new category
                         </button>
                     </div>
                 </form>
             </div>
-
             <div class="card-footer">
 
             </div>
