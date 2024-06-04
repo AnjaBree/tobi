@@ -36,7 +36,7 @@
                         <input class="product-input" type="number" name="price" placeholder="Price" />
                     </div>
                     <div class="input-container">
-                        
+
                         <input name="image" type="file" accept="image/*">
                     </div>
 
@@ -44,7 +44,17 @@
                         <select class="product-input" name="category">
                             @foreach ($categories as $category)
                                 <option value="{{ $category->id }}">
-                                    {{ $category->name }} ({{$category->type}})
+                                    {{ $category->name }}
+                                </option>
+                            @endforeach
+                        </select>
+                    </div>
+
+                    <div class="input-container">
+                        <select class="product-input" name="type">
+                            @foreach ($types as $type)
+                                <option value="{{ $type->id }}">
+                                    {{ $type->name }}
                                 </option>
                             @endforeach
                         </select>

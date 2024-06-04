@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\CategoryType;
 use Illuminate\Http\Request;
 use App\Models\Product;
 
@@ -16,9 +17,10 @@ class ProductController extends Controller
     {
 
         $categories = Category::all();
+        $types = CategoryType::all();
 
-        
-        
+
+
         $search = $request->get('q'); // Search term
         $type = $request->get('t'); // Category type
         $category = $request->get('c'); // Category name
@@ -39,11 +41,15 @@ class ProductController extends Controller
             $baseQuery->where('category_id', $category);
         }
 
+        if(!empty($type)) {
+            $baseQuery->where('product_type', $type);
+        }
+
 
         // Execute the query and paginate the results
         $products = $baseQuery->paginate(15)->withQueryString();
 
-        return view('products.index', compact('products', 'categories'));
+        return view('products.index', compact('products', 'categories', 'types'));
     }
 
     /**
@@ -53,7 +59,8 @@ class ProductController extends Controller
     public function create()
     {
         $categories = Category::all();
-        return view('products.create', compact('categories'));
+        $types = CategoryType::all();
+        return view('products.create', compact('categories', 'types'));
     }
 
     /**
@@ -66,7 +73,7 @@ class ProductController extends Controller
             $request->validate([
                 'image' => 'required|mimes:jpg,jpeg,png,svg|max:2048'
             ]);
-    
+
             $img = time().'.'.$request->file('image')->extension();
             $request->image->storeAs("public/images/products/", $img);
             $product = Product::create([
@@ -74,12 +81,13 @@ class ProductController extends Controller
                 'desc' => $request->desc,
                 'price'=> $request->price,
                 'category_id' => $request->category,
+                'product_type' => $request->type,
                 'img'=> $img
             ]);
 
             $product->save();
-    
-            return redirect()->route('products.index')->with('success','Product saved');
+
+            return redirect()->route('admin.products')->with('success','Product saved');
         } catch (\Exception $e) {
             return redirect()->back()->with('error', $e->getMessage());
         }

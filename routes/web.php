@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CategoryTypeController;
 use App\Http\Controllers\ProductPageController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
@@ -38,7 +39,7 @@ Route::middleware('auth')->group(function () {
     Route::post('cart/delete', [CartController::class,'clear'])->name('cart.clear');
     Route::resource('cart', CartController::class);
     Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
-    
+
 
     Route::middleware('role:admin')->group(function () {
         Route::get('/admin/products', [AdminController::class, 'index'])->name('admin.products');
@@ -47,6 +48,7 @@ Route::middleware('auth')->group(function () {
         Route::delete('/admin/{id}', [AdminController::class, 'delete'])->name('admin.delete');
 
         Route::resource('/category', CategoryController::class);
+        Route::resource('/type', CategoryTypeController::class);
     });
 });
 
