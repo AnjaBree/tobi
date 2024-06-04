@@ -23,34 +23,19 @@
     <div class="features">
     <div class="circle-container">
         <div class="circle"><img src="{{ asset('img/hero-image.png') }}" alt="Logo Image"></div>
-        <h3>Feature 1</h3>
-        <p>Description of feature 1...</p>
+        <h3>Zadovoljnih kupaca</h3>
+        <p>61658416146</p>
     </div>
     <div class="circle-container">
         <div class="circle"><img src="{{ asset('img/hero-image.png') }}" alt="Logo Image"></div>
-        <h3>Feature 2</h3>
-        <p>Description of feature 2...</p>
+        <h3>Prodanih proizvoda</h3>
+        <p>8659521</p>
     </div>
     <div class="circle-container">
         <div class="circle"><img src="{{ asset('img/hero-image.png') }}" alt="Logo Image"></div>
-        <h3>Feature 3</h3>
-        <p>Description of feature 3...</p>
+        <h3>Zaposlenih</h3>
+        <p>52959595</p>
     </div>
-    <div class="circle-container">
-        <div class="circle"><img src="{{ asset('img/hero-image.png') }}" alt="Logo Image"></div>
-        <h3>Feature 4</h3>
-        <p>Description of feature 4...</p>
-    </div>
-    <div class="circle-container">
-        <div class="circle"><img src="{{ asset('img/hero-image.png') }}" alt="Logo Image"></div>
-        <h3>Feature 4</h3>
-        <p>Description of feature 4...</p>
-    </div>
-    <div class="circle-container">
-        <div class="circle"><img src="{{ asset('img/hero-image.png') }}" alt="Logo Image"></div>
-            <h3>Feature 4</h3>
-            <p>Description of feature 4...</p>
-        </div>
 
     </div>
     <section id="contact" class="contact">
