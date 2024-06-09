@@ -5,11 +5,11 @@
 @section('content')
   <section class="hero">
     <div class="hero-content">
-        <div class="text-cpntent">
+        <div class="text-content">
             <h2>About us</h2>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget ex vestibulum, 
-                feugiat turpis id, aliquam metus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget ex vestibulum, 
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget ex vestibulum,
+                feugiat turpis id, aliquam metus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget ex vestibulum,
                 feugiat turpis id, aliquam metus.</p>
 
             <button>Learn More</button>

@@ -35,12 +35,14 @@
             <div class="product-cards">
                 @foreach($products as $product)
                     <div class="product-card">
-                        <img src="{{ asset('storage') }}/images/products/{{ $product->img }}" alt="{{ $product->name }}"
-                             class="product-image">
-                        <div class="product-details">
-                            <h2>{{ $product->name }}</h2>
-                            <p>{{ $product->desc }}</p>
-                            <p>{{ $product->price }}</p>
+                        <div class="product-card-body">
+                            <img src="{{ asset('storage') }}/images/products/{{ $product->img }}" alt="{{ $product->name }}"
+                                 class="product-image">
+                            <div class="product-details">
+                                <h2>{{ $product->name }}</h2>
+                                <p>{{ $product->desc }}</p>
+                                <p>{{ $product->price }}</p>
+                            </div>
                         </div>
                         <form class="cart-btn-container" method="POST" action="{{ route('cart.store') }}">
                             @csrf
