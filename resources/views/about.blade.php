@@ -22,17 +22,17 @@
     </section>
     <div class="features">
     <div class="circle-container">
-        <div class="circle"><img src="{{ asset('img/hero-image.png') }}" alt="Logo Image"></div>
-        <h3>Zadovoljnih kupaca</h3>
-        <p>61658416146</p>
+        <div class="circle"><img src="{{ asset('img/5112780.png') }}" alt="Logo Image"></div>
+        <h3 class="kupci">Zadovoljnih kupaca</h3>
+        <p class="kupci">100.000</p>
     </div>
     <div class="circle-container">
-        <div class="circle"><img src="{{ asset('img/hero-image.png') }}" alt="Logo Image"></div>
+        <div class="circle"><img src="{{ asset('img/6193714.png') }}" alt="Logo Image"></div>
         <h3>Prodanih proizvoda</h3>
         <p>8659521</p>
     </div>
     <div class="circle-container">
-        <div class="circle"><img src="{{ asset('img/hero-image.png') }}" alt="Logo Image"></div>
+        <div class="circle"><img src="{{ asset('img/6193714.png') }}" alt="Logo Image"></div>
         <h3>Zaposlenih</h3>
         <p>52959595</p>
     </div>

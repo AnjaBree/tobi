@@ -87,41 +87,40 @@ body {
 }
 
 .login_form button:hover {
-    background-color: #CDD2D1; /* Slightly darker shade on hover */
+    background-color: #CDD2D1; 
 }
 
-/* Placeholder Styling */
+
 ::placeholder {
     color: #a59d9d;
     opacity: 30%;
 }
 
-/* Accessibility and Responsiveness */
+
 @media (max-width: 768px) {
  .login_form {
-        width: 100%; /* Full width on smaller screens */
+        width: 100%; 
     }
 }
 
 
 
-/* General styling for input fields */
 input[type="name"], input[type="email"], input[type="password"] {
-    width: 100%; /* Full width */
-    padding: 12px; /* Increased padding for better touch targets */
-    margin: 8px 0; /* Added margin for spacing */
-    display: inline-block; /* Allows for block-level behavior */
-    border: 1px solid #ccc; /* Slightly thicker border for better visibility */
-    border-radius: 4px; /* Rounded corners for a softer look */
-    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
-    font-size: 16px; /* Larger font size for easier reading */
-    background-color: #f9f9f9; /* Lighter background for better contrast */
-    color: #333; /* Darker text for better readability */
+    width: 100%; 
+    padding: 12px; 
+    margin: 8px 0; 
+    display: inline-block; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    font-size: 16px; 
+    background-color: #f9f9f9; 
+    color: #333; 
 }
 
-/* Styling for the submit button */
+
 button {
-    background-color: #4CAF50; /* Green background */
+    background-color: #4CAF50; 
 }
 
 

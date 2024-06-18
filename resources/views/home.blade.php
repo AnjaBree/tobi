@@ -8,7 +8,7 @@
 
 @section('content')
 <body class="test">
-{{-- </section> --}}
+
 <section class="hero">
     <div class="hero-content">
         <div class="text-content">
@@ -19,7 +19,7 @@
 
             <div class="button-container">
                 <div class="button-shop">
-                    Shop Now
+                   Shop Now 
                 </div>
             </div>
         </div>
