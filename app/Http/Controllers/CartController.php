@@ -83,7 +83,7 @@ class CartController extends Controller
             foreach ($del as $item) {
                 $item->delete();
             }
-            return redirect()->back()->with("success","Deleted");
+            return redirect()->back()->with("success", "Uspešno izvršena kupovina");
         } catch (Exception $e) {
             error_log($e->getMessage());
             return redirect()->back()->with("error", $e->getMessage());

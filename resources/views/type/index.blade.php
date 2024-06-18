@@ -32,7 +32,9 @@
                                         <form method="POST" action={{ route('type.destroy', $category->id) }}>
                                             @csrf
                                             @method('delete')
-                                            <button>Delete</button>
+                                            <button class="delete-button">
+                                                <i class="fa-solid fa-trash"></i>
+                                              </button>
                                         </form>
                                     </div>
 

@@ -33,12 +33,16 @@
                             <td>{{ $product->price }}$</td>
                             
                             <td>
-                                <div class="">
-                                    <a href="{{ route('products.edit', $product->id) }}">Edit</a>
+                                <div class="controls">
+                                    <a href="{{ route('products.edit', $product->id) }}">
+                                      <i class="fa-solid fa-pencil"></i>
+                                    </a>
                                     <form method="POST" action={{ route('products.destroy', $product->id) }}>
                                         @csrf
                                         @method('delete')
-                                        <button>Delete</button>
+                                        <button class="delete-button">
+                                          <i class="fa-solid fa-trash"></i>
+                                        </button>
                                     </form>
                                 </div>
                                 

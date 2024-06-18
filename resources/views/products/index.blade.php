@@ -26,7 +26,7 @@
                         <option value="{{ $type->id }}">{{ $type->name }}</option>
                     @endforeach
                 </select>
-                <button class="">
+                <button class="add-filter-button">
                     Dodaj filter
                 </button>
             </form>
@@ -41,7 +41,7 @@
                             <div class="product-details">
                                 <h2>{{ $product->name }}</h2>
                                 <p>{{ $product->desc }}</p>
-                                <p>{{ $product->price }}</p>
+                                <p>${{ $product->price }}</p>
                             </div>
                         </div>
                         <form class="cart-btn-container" method="POST" action="{{ route('cart.store') }}">

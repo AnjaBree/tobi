@@ -177,6 +177,32 @@ body {
     display: flex;
 }
 
+.filters select {
+    border: none;
+    padding: 5px 15px;
+    border: 2px solid rgba(252, 151, 39, 1);
+    border-radius: 5px;
+    font-weight: bold;
+    color: rgba(252, 151, 39, 1);
+}
+
+.add-filter-button {
+    background: rgba(252, 151, 39, 1);
+    font-weight: bolder;
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: none;
+    color: #FFF;
+    font-size: 16px;
+}
+
+
+.filter select:focus {
+    outline: none;
+    box-shadow: none !important;
+    border: 2px solid rgba(252, 151, 39, 1);
+}
+
 .button-shop {
     padding: 10px 20px;
     border-radius: 10px;
@@ -184,6 +210,7 @@ body {
     font-weight: bolder;
     font-size: 20px;
     background-color: #fc9727;
+    text-decoration: none;
 
     -webkit-box-shadow: 0px 0px 37px -2px rgba(252, 151, 39, 1);
     -moz-box-shadow: 0px 0px 37px -2px rgba(252, 151, 39, 1);
@@ -275,6 +302,7 @@ body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    text-decoration: none;
 }
 
 .info-item h3 {
@@ -647,10 +675,10 @@ input[type="file"]::file-selector-button {
     transition: background 0.2s ease-in-out;
 }
 .search-form {
-    color: #555;
+    color: rgba(252, 151, 39, 1);
     display: flex;
     padding: 2px;
-    border: 1px solid currentColor;
+    border: 2px solid currentColor;
     border-radius: 5px;
 }
 
@@ -663,6 +691,19 @@ input[type="search"] {
     color: inherit;
     border: 1px solid transparent;
     border-radius: inherit;
+    outline: none;
+}
+
+.search-input:active {
+    outline: none;
+}
+
+.search-input:focus {
+    outline: none;
+    border: none;
+    box-shadow: none !important;
+    background: transparent;
+    border-color: none;
 }
 
 input[type="search"]::placeholder {
@@ -672,6 +713,7 @@ input[type="search"]::placeholder {
 .search-button {
     text-indent: -999px;
     overflow: hidden;
+    color: rgba(252, 151, 39, 1);
     width: 40px;
     padding: 0;
     margin: 0;
@@ -800,7 +842,10 @@ input[type="file"]::file-selector-button:hover {
 .cart-container {
     width: 80%;
     margin: 100px auto 0 auto;
+    position: relative;
 }
+
+
 
 .cart-container .cart {
     display: flex;
@@ -910,6 +955,35 @@ section {
 .text-muted {
     padding-top: 20px;
 }
+
+.controls {
+    display: flex;
+    gap: 10px;
+    font-size: 20px;
+    
+}
+
+.controls a {
+    transition: .1s;
+    color: #000;
+}
+
+.controls a:hover {
+    scale: 1.1;
+}
+
+.delete-button:hover {
+    scale: 1.1;
+}
+
+.delete-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .1s;
+}
+
 
 @media (max-width: 768px) {
     .nav {

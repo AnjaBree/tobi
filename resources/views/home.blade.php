@@ -18,9 +18,9 @@
             </p>
 
             <div class="button-container">
-                <div class="button-shop">
+                <a href="{{ route('products.index') }}" class="button-shop">
                    Shop Now 
-                </div>
+                </a>
             </div>
         </div>
         <div class="image-content">
@@ -32,34 +32,34 @@
 <!-- Custom Navbar -->
 <nav class="navbar1">
     <ul class="navbar1-nav">
-        <li><a href="#"><i class="fas fa-dog"></i> Dog</a></li>
-        <li><a href="#"><i class="fas fa-cat"></i> Cat</a></li>
-        <li><a href="#"><i class="fas fa-paw"></i> Other animals</a></li>
+        <li><a href="products?c=&t=1"><i class="fas fa-dog"></i> Dog</a></li>
+        <li><a href="products?c=&t=2"><i class="fas fa-cat"></i> Cat</a></li>
+        <li><a href="/products?c=&t=3"><i class="fas fa-paw"></i> Other animals</a></li>
     </ul>
 </nav>
 <section class="info-section">
     <div class="info-content">
-        <div class="info-item">
+        <a href="products?c=1&t=" class="info-item">
             <img src="/img/food.png" alt="Image 1"> <!-- Example image -->
             <h3>Quality pet food</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet lacus nec nunc lacinia.
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet lacus nec nunc lacinia.
             </p>
-        </div>
-        <div class="info-item">
+        </a>
+        <a href="products?c=3&t=" class="info-item">
             <img src="/img/game.png" alt="Image 1"> <!-- Example image -->
             <h3>Quality pet Game</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet lacus nec nunc lacinia.
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet lacus nec nunc lacinia.
             </p>
-        </div>
-        <div class="info-item">
+        </a>
+        <a href="products?c=2" class="info-item">
             <img src="/img/care.png" alt="Image 1"> <!-- Example image -->
             <h3>Quality pet Care</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet lacus nec nunc lacinia.
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet lacus nec nunc lacinia.
             </p>
-        </div>
+        </a>
     </div>
 </section>
 <footer class="footer">
