@@ -9,7 +9,7 @@
 @section('content')
     <div class="admin-products">
         <section>
-            <!--for demo wrap-->
+           
             <h1>Products</h1>
             <div class="tbl-header">
                 <table cellpadding="0" cellspacing="0" border="0">

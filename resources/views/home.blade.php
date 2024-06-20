@@ -29,7 +29,7 @@
     </div>
 </section>
 
-<!-- Custom Navbar -->
+
 <nav class="navbar1">
     <ul class="navbar1-nav">
         <li><a href="products?c=&t=1"><i class="fas fa-dog"></i> Dog</a></li>
@@ -40,22 +40,22 @@
 <section class="info-section">
     <div class="info-content">
         <a href="products?c=1&t=" class="info-item">
-            <img src="/img/food.png" alt="Image 1"> <!-- Example image -->
+            <img src="/img/food.png" alt="Image 1">
             <h3>Quality pet food</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet lacus nec nunc lacinia.
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet lacus nec nunc lacinia.
             </p>
         </a>
         <a href="products?c=3&t=" class="info-item">
-            <img src="/img/game.png" alt="Image 1"> <!-- Example image -->
-            <h3>Quality pet Game</h3>
+            <img src="/img/game.png" alt="Image 1"> 
+            <h3>Quality pet toys</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet lacus nec nunc lacinia.
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet lacus nec nunc lacinia.
             </p>
         </a>
         <a href="products?c=2" class="info-item">
-            <img src="/img/care.png" alt="Image 1"> <!-- Example image -->
-            <h3>Quality pet Care</h3>
+            <img src="/img/care.png" alt="Image 1"> 
+            <h3>Quality pet care</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet lacus nec nunc lacinia.
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet lacus nec nunc lacinia.
             </p>

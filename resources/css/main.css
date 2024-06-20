@@ -1,4 +1,4 @@
-/* General Styles */
+
 @import url("https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap");
 
 body {
@@ -9,7 +9,7 @@ body {
     background-color: #fff;
 }
 
-/* Logo */
+
 .logo {
     display: block;
     text-align: center;
@@ -19,13 +19,13 @@ body {
     text-decoration: none;
 }
 .logo img {
-    height: 60px; /* Adjust the height as needed */
+    height: 60px; 
 }
 
-/* Navbar */
+
 .navbar {
     background-color: #fff;
-    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    
     padding: 10px 20px;
     display: flex;
     position: fixed;
@@ -107,7 +107,7 @@ body {
     color: #333;
 }
 
-/* Menu Button */
+
 #menu-btn {
     display: none;
     cursor: pointer;
@@ -116,7 +116,7 @@ body {
     padding: 20px;
 }
 
-/* Styling for Shopping Cart Icon */
+
 .cart {
     display: flex;
     align-items: center;
@@ -129,8 +129,8 @@ body {
 }
 
 .cart i {
-    font-size: 24px; /* Adjust size as needed */
-    color: #333; /* Adjust color as needed */
+    font-size: 24px; 
+    color: #333; 
 }
 
 .badge {
@@ -142,7 +142,7 @@ body {
     margin-left: 5px;
 }
 
-/* Hero Section */
+
 .hero {
     margin-top: 60px;
 }
@@ -229,15 +229,14 @@ body {
     height: auto;
 }
 
-/* Centering Navbar */
 .navbar1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fff; /* Light background */
+    background-color: #fff; 
     padding: 10px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 10px; /* Rounded corners */
+    border-radius: 10px;
 }
 
 .navbar1-nav {
@@ -251,38 +250,38 @@ body {
 
 .navbar1-nav {
     display: flex;
-    justify-content: center; /* Center items horizontally */
-    list-style-type: none; /* Remove bullet points */
+    justify-content: center; 
+    list-style-type: none; 
     padding: 0;
 }
 
 .navbar1-nav li {
-    margin: 0 10px; /* Adjusted spacing between nav items */
+    margin: 0 10px; 
 }
 
 .navbar1-nav a {
-    color: #fff; /* Text color */
+    color: #fff; 
     text-decoration: none;
-    display: flex; /* Allows for icon and text alignment */
-    align-items: center; /* Vertically centers icon and text */
-    padding: 10px 20px; /* Padding for button-like feel */
-    border-radius: 5px; /* Rounded corners */
-    background-color: #adc0d4; /* Button background color */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    display: flex; 
+    align-items: center; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    background-color:rgba(252, 151, 39, 1);
+    transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
 .navbar1-nav a:hover {
-    background-color: #c1d5ea; /* Darker shade on hover */
+    background-color:rgb(167, 86, 0); 
 }
 
 .navbar1-nav a i {
-    margin-right: 10px; /* Adjust spacing between icon and text */
-    font-size: 30px; /* Larger icons for better visibility */
+    margin-right: 10px; 
+    font-size: 30px; 
 }
 
 /* Info Section */
 .info-section {
-    background-color: #ffffff; /* Adjust as needed */
+    background-color: #ffffff; 
     padding: 20px 0;
 }
 
@@ -322,16 +321,18 @@ body {
 }
 
 .info-item img {
-    width: auto; /* Adjust as needed */
-    max-width: 100%; /* Ensures the image does not overflow its container */
-    height: auto; /* Maintains aspect ratio */
-    margin-bottom: 10px; /* Space between image and text */
+    width: auto;
+    max-width: 100%; 
+    height: auto; 
+    margin-bottom: 10px; 
 }
-/* Footer */
+
 .footer {
     background-color: #333;
     color: #fefefe;
-    padding: 20px 0;
+    padding: 20px ;
+    
+    
 }
 
 .footer-content {
@@ -444,18 +445,18 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 50px;
-    background-color: #f7f7f7; /* Boja pozadine */
+    background-color: #f7f7f7; 
 }
 
 .hero-content {
     flex: 1;
-    text-align: left; /* Poravnanje teksta na lijevu stranu */
+    text-align: left; 
 }
 
 .hero-content h2 {
     color: #333;
-    font-size: 2em; /* Veličina naslova */
-    margin-bottom: 10px; /* Margina ispod naslova */
+    font-size: 2em; 
+    margin-bottom: 10px; 
 }
 
 .hero-content p {
@@ -494,41 +495,40 @@ body {
     text-align: center;
     padding: 50px 0;
     display: flex;
-    flex-wrap: wrap; /* Omogućava prelamanje elemenata */
-    justify-content: center; /* Centrira elemente po horizontalnoj osi */
+    flex-wrap: wrap; 
+    justify-content: center; 
 }
 
 .circle-container {
     display: flex;
-    flex-direction: column; /* Stavlja tekst ispod svakog kruga */
+    flex-direction: column; 
     align-items: center;
     margin-bottom: 20px;
-    margin-right: 20px; /* Dodaje marginu između krugova */
+    margin-right: 20px; 
 }
 
 .circle {
-    width: 250px; /* Povećana veličina krugova */
-    height: 250px; /* Povećana veličina krugova */
-    border-radius: 50%; /* Zaobljeni rubovi */
-    overflow: hidden; /* Osigurava da slika stane unutar kruga */
+    width: 250px; 
+    height: 250px; 
+    border-radius: 50%; 
+    overflow: hidden; 
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 10px; /* Margina između krugova */
+    margin: 0 10px;
 }
 
 .circle img {
-    width: 110%; /* Veličina slike */
+    width: 110%; 
     height: auto;
-    object-fit: cover; /* Sprječava distorziju slike */
+    object-fit: cover; 
 }
-
 .feature-text {
     text-align: center;
 }
 
 .feature-text h2 {
-    margin-bottom: 10px; /* Margina ispod naslova */
+    margin-bottom: 10px; 
 }
 
 .contact {
@@ -536,8 +536,8 @@ body {
     padding: 50px 0;
     display: flex;
     flex-direction: column;
-    max-width: 600px; /* Maximum width of the form container */
-    margin: 0 auto; /* Centering the form horizontally */
+    max-width: 600px; 
+    margin: 0 auto; 
 }
 
 .contact form {
@@ -546,26 +546,25 @@ body {
     align-items: center;
     gap: 20px;
     padding: 20px;
-    border-radius: 15px; /* Larger border radius for a softer look */
+    border-radius: 15px; 
     -webkit-box-shadow: 0px 0px 37px -2px rgba(252, 151, 39, 1);
     -moz-box-shadow: 0px 0px 37px -2px rgba(252, 151, 39, 1);
     box-shadow: 0px 0px 37px -2px rgba(252, 151, 39, 1);
-    /* width: 100%; Full width to fill the container */
+  
 }
-
 .contact label {
-    display: block; /* Ensures labels take full width */
-    margin-bottom: 5px; /* Space between label and input field */
+    display: block;
+    margin-bottom: 5px; 
 }
 
 .contact input[type="text"],
 .contact input[type="email"],
 .contact textarea {
     padding: 10px;
-    border: 1px solid #ddd; /* Light grey border */
-    border-radius: 5px; /* Rounded corners */
-    width: 100%; /* Full width */
-    box-sizing: border-box; /* Includes padding and border in total width */
+    border: 1px solid #ddd;
+    border-radius: 5px; 
+    width: 100%; 
+    box-sizing: border-box; 
 }
 
 .contact textarea {
@@ -580,7 +579,7 @@ body {
     border: none;
     cursor: pointer;
     border-radius: 5px;
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    transition: background-color 0.3s ease; 
 }
 
 .contact button:hover {
@@ -938,8 +937,21 @@ section {
 }
 
 .kupci {
+    margin: 0;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.broj {
     color: rgba(252, 151, 39, 1);
-    
+
+    font-size: 35px;
+    margin: 0px;
+    font-weight: bold;
+}
+
+.heading-circle {
+    margin: 0;
 }
 
 ::-webkit-scrollbar {

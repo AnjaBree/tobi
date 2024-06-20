@@ -8,7 +8,7 @@
 
 @section('content')
     <div class="cart-container">
-        <!-- Toast -->
+       
         <div id="toast-container" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999;">
             @if(session('success'))
             <div id="toast" style="min-width: 250px; background-color: #28a745; color: white; padding: 16px; border-radius: 4px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
@@ -56,7 +56,7 @@
             if (toast) {
                 setTimeout(() => {
                     toast.style.display = 'none';
-                }, 3000); // 3 seconds
+                }, 3000); 
             }
         });
 

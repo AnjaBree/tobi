@@ -1,4 +1,4 @@
-/* General Reset */
+
 * {
     margin: 0;
     padding: 0;
@@ -8,10 +8,10 @@
     letter-spacing: 0.5px;
     outline: none;
     border: none;
-    transition: all 0.3s ease; /* Smooth transitions for interactive elements */
+    transition: all 0.3s ease; 
 }
 
-/* Full Page Background */
+
 body {
   
     background-size: cover;
@@ -24,15 +24,15 @@ body {
     overflow: hidden;
 }
 
-/* Full Page Login Form */
+
 .login_form {
-    width: 90%; /* Adjust based on your preference */
-    max-width: 500px; /* Maximum width for larger screens */
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    width: 90%;
+    max-width: 500px;
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 50px 35px;
     border-radius: 10px;
     box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
-    animation: fadeIn 1s ease-in-out; /* Animation for a smooth appearance */
+    animation: fadeIn 1s ease-in-out; 
 }
 
 @keyframes fadeIn {
@@ -40,35 +40,34 @@ body {
     to { opacity: 1; }
 }
 
-/* Form Elements */
+
 .login_form h3 {
     font-size: 32px;
     font-weight: 500;
     line-height: 42px;
     text-align: center;
-    color: #333; /* Darker text for better contrast against the background */
+    color: #333; 
 }
-
 .login_form label {
     display: block;
     margin-top: 30px;
     font-size: 16px;
     font-weight: 500;
-    color: #333; /* Darker text for better contrast against the background */
+    color: #333; 
 }
 
 .login_form input {
     display: block;
     height: 50px;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background for inputs */
+    background-color: rgba(255, 255, 255, 0.9); 
     border-radius: 3px;
     padding: 0 10px;
     margin-top: 8px;
     font-size: 16px;
     font-weight: 300;
-    color: #333; /* Darker text for better contrast against the background */
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border for inputs */
+    color: #333; 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
 }
 
 .login_form button {
@@ -81,9 +80,9 @@ body {
     font-weight: 600;
     border-radius: 5px;
     cursor: pointer;
-    border: none; /* Remove default button border */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* Add shadow for a modern look */
-    transition: background-color 0.3s ease; /* Smooth background color change on hover */
+    border: none; 
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); 
+    transition: background-color 0.3s ease; 
 }
 
 .login_form button:hover {

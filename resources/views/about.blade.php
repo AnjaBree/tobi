@@ -24,17 +24,17 @@
     <div class="circle-container">
         <div class="circle"><img src="{{ asset('img/5112780.png') }}" alt="Logo Image"></div>
         <h3 class="kupci">Zadovoljnih kupaca</h3>
-        <p class="kupci">100.000</p>
+        <p class="kupci broj">100.000</p>
+    </div>
+    <div class="circle-container">
+        <div class="circle"><img src="{{ asset('img/Pet shop seller selling vet goods for animals.jpg') }}" alt="Logo Image"></div>
+        <h3 class="kupci">Prodanih proizvoda</h3>
+        <p class="broj">93.988.123</p>
     </div>
     <div class="circle-container">
         <div class="circle"><img src="{{ asset('img/6193714.png') }}" alt="Logo Image"></div>
-        <h3>Prodanih proizvoda</h3>
-        <p>8659521</p>
-    </div>
-    <div class="circle-container">
-        <div class="circle"><img src="{{ asset('img/6193714.png') }}" alt="Logo Image"></div>
-        <h3>Zaposlenih</h3>
-        <p>52959595</p>
+        <h3 class="kupci">Zaposlenih</h3>
+        <p class="broj">139</p>
     </div>
 
     </div>
